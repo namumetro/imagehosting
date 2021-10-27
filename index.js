@@ -33,6 +33,7 @@ const port = 3000
 
 app.set('view engine', 'ejs')
 app.set('views', './views')
+app.use('/images', express.static('uploads'));
 
 app.get('/', (req, res) => {
   res.render('index')
